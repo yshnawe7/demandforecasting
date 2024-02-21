@@ -1,0 +1,15 @@
+import random
+import pandas as pd
+[w1, w2, w3, w4, w5] [0.001666480,0.001656191,0.001666471,0.001666466,0.001685674]
+Rectangular Snip
+vals = []
+for i in range(10000):
+x1 = random.randint(1, 5000)
+x2 = random.randint(1, 2)
+x3 = random.randint(1,50000)
+x4 = random.randint(1, 5000)
+x5 = random.randint(1, 5)
+eq = w1*x1+w2*x2+ w3*x3+ w4x4 + 5 * x5
+vals.append([x1, x2, x3, x4, x5, eq])
+df = pd.DataFrame(vals, columns=['Items', 'Quality', 'Net orders', 'New orders', 'Rating', 'Demand'])
+df.to_csv('pop_data.csv', index=False)
